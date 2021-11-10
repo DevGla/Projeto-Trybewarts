@@ -15,4 +15,9 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-module.exports = () => {}
+module.exports = (on, config) => {
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+     launchOptions.args.push('--disable-dev-shm-usage')
+     return launchOptions
+ })
+};

@@ -384,15 +384,15 @@ describe('Trybewarts', () => {
       });
 
       cy.get('.subject').then(($tag) => {
-        cy.wrap($tag).check('React');
+        cy.wrap($tag).check('React', {force: true});
       });
 
       cy.get('.subject').then(($tag) => {
-        cy.wrap($tag).check('Jest');
+        cy.wrap($tag).check('Jest', {force: true});
       });
 
       cy.get('.subject').then(($tag) => {
-        cy.wrap($tag).check('SQL');
+        cy.wrap($tag).check('SQL', {force: true});
       });
 
       cy.get('input[name="rate"]').then(($tag) => {
